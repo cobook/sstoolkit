@@ -185,6 +185,17 @@ static CGFloat kIndicatorSize = 40.0;
 }
 
 
+- (void)setTitle:(NSString *)title {
+	_textLabel.text = title;
+	[self setNeedsLayout];
+}
+
+
+- (NSString *)title {
+	return _textLabel.text;
+}
+
+
 - (void)show {
 //	[self retain];
 	if (!_hudWindow) {
@@ -227,10 +238,16 @@ static CGFloat kIndicatorSize = 40.0;
 }
 
 
+- (void)showWithTitle:(NSString *)title {
+	self.title = title;
+	[self show];
+}
+
+
 - (void)completeWithTitle:(NSString *)aTitle {
 	self.successful = YES;
 	self.loading = NO;
-	_textLabel.text = aTitle;
+	self.title = aTitle;
 }
 
 
@@ -250,7 +267,7 @@ static CGFloat kIndicatorSize = 40.0;
 - (void)failWithTitle:(NSString *)aTitle {
 	self.successful = NO;
 	self.loading = NO;
-	_textLabel.text = aTitle;
+	self.title = aTitle;
 }
 
 

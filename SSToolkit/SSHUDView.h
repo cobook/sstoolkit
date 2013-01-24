@@ -17,11 +17,13 @@
 @property (nonatomic, assign) BOOL hidesVignette;
 @property (nonatomic, strong) UIImage *completeImage;
 @property (nonatomic, strong) UIImage *failImage;
+@property (nonatomic, strong) NSString *title;
 
 - (id)initWithTitle:(NSString *)aTitle;
 - (id)initWithTitle:(NSString *)aTitle loading:(BOOL)isLoading;
 
 - (void)show;
+- (void)showWithTitle:(NSString *)title;
 - (void)dismiss;
 - (void)dismissAnimated:(BOOL)animated;
 
