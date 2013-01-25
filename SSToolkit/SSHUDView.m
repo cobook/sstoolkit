@@ -244,6 +244,14 @@ static CGFloat kIndicatorSize = 40.0;
 }
 
 
+- (void)showLoadingWithTitle:(NSString *)title
+{
+  self.title = title;
+  self.loading = YES;
+  [self show];
+}
+
+
 - (void)completeWithTitle:(NSString *)aTitle {
 	self.successful = YES;
 	self.loading = NO;

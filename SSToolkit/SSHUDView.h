@@ -24,6 +24,7 @@
 
 - (void)show;
 - (void)showWithTitle:(NSString *)title;
+- (void)showLoadingWithTitle:(NSString *)title;
 - (void)dismiss;
 - (void)dismissAnimated:(BOOL)animated;
 
