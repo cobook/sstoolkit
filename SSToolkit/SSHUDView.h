@@ -14,6 +14,7 @@
 @property (nonatomic, assign) CGSize hudSize;
 @property (nonatomic, assign, getter=isLoading) BOOL loading;
 @property (nonatomic, assign, getter=isSuccessful) BOOL successful;
+@property (nonatomic, assign, getter=isVisible) BOOL visible;
 @property (nonatomic, assign) BOOL hidesVignette;
 @property (nonatomic, strong) UIImage *completeImage;
 @property (nonatomic, strong) UIImage *failImage;

@@ -198,6 +198,10 @@ static CGFloat kIndicatorSize = 40.0;
 
 - (void)show {
 //	[self retain];
+  if (self.visible) {
+    return;
+  }
+  
 	if (!_hudWindow) {
 		_hudWindow = [SSHUDWindow defaultWindow];
 	}
@@ -235,12 +239,14 @@ static CGFloat kIndicatorSize = 40.0;
 	[UIView setAnimationDuration:0.3];
 	self.frame = contentFrame;
 	[UIView commitAnimations];
+  
+  self.visible = YES;
 }
 
 
 - (void)showWithTitle:(NSString *)title {
 	self.title = title;
-	[self show];
+  [self show];
 }
 
 
@@ -256,6 +262,7 @@ static CGFloat kIndicatorSize = 40.0;
 	self.successful = YES;
 	self.loading = NO;
 	self.title = aTitle;
+  [self show];
 }
 
 
@@ -267,7 +274,6 @@ static CGFloat kIndicatorSize = 40.0;
 
 - (void)completeQuicklyWithTitle:(NSString *)aTitle {
 	[self completeWithTitle:aTitle];
-	[self show];
 	[self performSelector:@selector(dismiss) withObject:nil afterDelay:1.05];
 }
 
@@ -299,6 +305,10 @@ static CGFloat kIndicatorSize = 40.0;
 
 
 - (void)dismissAnimated:(BOOL)animated {
+  if (!self.visible) {
+    return;
+  }
+  
 	[UIView beginAnimations:@"SSHUDViewFadeOutContentFrame" context:nil];
 	[UIView setAnimationDuration:0.2];
 	CGRect contentFrame = self.frame;
@@ -325,6 +335,8 @@ static CGFloat kIndicatorSize = 40.0;
 	} else {
 		[self _removeWindow];
 	}
+  
+  self.visible = NO;
 }
 
 
