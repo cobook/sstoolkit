@@ -124,18 +124,19 @@ CGFloat const kAngleOffset = -90.0f;
 	}
 
 	// Inner Border
-	if (_progress < 0.99f && _pieInnerBorderColor && _pieInnerBorderWidth > 0.0f) {
+	if (_pieInnerBorderColor && _pieInnerBorderWidth > 0.0f) {
 		[_pieInnerBorderColor set];
-		CGContextAddLines(context, points, sizeof(points) / sizeof(points[0]));
-		CGContextDrawPath(context, kCGPathStroke);
+    CGContextSetLineWidth(context, _pieInnerBorderWidth);
+    CGFloat inset = _pieBorderWidth + _pieBorderWidth / 2;
+    CGContextStrokeEllipseInRect(context, CGRectInset(rect, inset, inset));
 	}
 
 	// Outer Border
 	if (_pieBorderColor && _pieBorderWidth > 0.0f) {
 		[_pieBorderColor set];
 		CGContextSetLineWidth(context, _pieBorderWidth);
-		CGRect pieInnerRect = CGRectMake(_pieBorderWidth / 2.0f, _pieBorderWidth / 2.0f, rect.size.width - _pieBorderWidth, rect.size.height - _pieBorderWidth);
-		CGContextStrokeEllipseInRect(context, pieInnerRect);
+    CGFloat inset = _pieBorderWidth / 2;
+    CGContextStrokeEllipseInRect(context, CGRectInset(rect, inset, inset));
 	}
 }
 
