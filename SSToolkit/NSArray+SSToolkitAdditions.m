@@ -26,7 +26,7 @@
 
 
 - (id)randomObject {
-	return [self objectAtIndex:arc4random_uniform([self count])];
+	return self.count == 0 ? nil : self[arc4random_uniform(self.count)];
 }
 
 - (NSArray *)shuffledArray {
