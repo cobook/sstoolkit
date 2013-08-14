@@ -209,7 +209,7 @@ static CGFloat kIndicatorSize = 40.0;
 	_hudWindow.alpha = 0.0f;
 	self.alpha = 0.0f;
 	[_hudWindow addSubview:self];
-	[_hudWindow makeKeyAndVisible];
+  _hudWindow.hidden = NO;
 	
 	[UIView beginAnimations:@"SSHUDViewFadeInWindow" context:nil];
 	_hudWindow.alpha = 1.0f;
@@ -384,11 +384,8 @@ static CGFloat kIndicatorSize = 40.0;
 
 
 - (void)_removeWindow {	
-	[_hudWindow resignKeyWindow];
+  _hudWindow.hidden = YES;
 	_hudWindow = nil;
-	
-	// Return focus to the first window
-	[[[[UIApplication sharedApplication] windows] objectAtIndex:0] makeKeyWindow];
 }
 
 @end
