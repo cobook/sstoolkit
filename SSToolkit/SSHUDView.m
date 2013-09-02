@@ -128,8 +128,8 @@ static CGFloat kIndicatorSize = 40.0;
 	if (_textLabelHidden) {
 		_textLabel.frame = CGRectZero;
 	} else {
-		CGSize textSize = [_textLabel.text sizeWithFont:_textLabel.font constrainedToSize:CGSizeMake(self.bounds.size.width, CGFLOAT_MAX) lineBreakMode:_textLabel.lineBreakMode];
-		_textLabel.frame = CGRectMake(0.0f, roundf(_hudSize.height - textSize.height - 10.0f), _hudSize.width, textSize.height);
+		CGSize textSize = [_textLabel.text sizeWithFont:_textLabel.font constrainedToSize:CGSizeMake(self.bounds.size.width - 20, CGFLOAT_MAX) lineBreakMode:_textLabel.lineBreakMode];
+		_textLabel.frame = CGRectMake(10.0f, roundf(_hudSize.height - textSize.height - 10.0f), _hudSize.width - 20, textSize.height);
 	}
 }
 
