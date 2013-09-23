@@ -15,6 +15,7 @@
 #import <SSToolkit/NSURL+SSToolkitAdditions.h>
 
 // UIKit
+#if   TARGET_OS_IPHONE
 #import <SSToolkit/UIApplication+SSToolkitAdditions.h>
 #import <SSToolkit/UIColor+SSToolkitAdditions.h>
 #import <SSToolkit/UIControl+SSToolkitAdditions.h>
@@ -24,3 +25,4 @@
 #import <SSToolkit/UIScrollView+SSToolkitAdditions.h>
 #import <SSToolkit/UIView+SSToolkitAdditions.h>
 #import <SSToolkit/UIViewController+SSToolkitAdditions.h>
+#endif
