@@ -111,11 +111,7 @@ static CGFloat kIndicatorSize = 40.0;
 		CGRect dingbatRect = CGRectMake(roundf((_hudSize.width - dingbatSize.width) / 2.0f),
 										roundf((_hudSize.height - dingbatSize.height) / 2.0f),
 										dingbatSize.width, dingbatSize.height);
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
 		[dingbat drawInRect:dingbatRect withFont:dingbatFont lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
-#else
-		[dingbat drawInRect:dingbatRect withFont:dingbatFont lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
-#endif
 	}
 }
 
