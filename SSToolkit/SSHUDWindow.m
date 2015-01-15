@@ -46,7 +46,7 @@ static SSHUDWindow *kHUDWindow = nil;
 	if ((self = [super initWithFrame:[[UIScreen mainScreen] bounds]])) {
 		self.backgroundColor = [UIColor clearColor];
 		self.windowLevel = UIWindowLevelStatusBar + 1.0f;
-    self.rootViewController = [SSHUDWindowRootViewController new];
+		self.rootViewController = [SSHUDWindowRootViewController new];
 	}
 	return self;
 }
@@ -72,31 +72,31 @@ static SSHUDWindow *kHUDWindow = nil;
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-  return UIStatusBarStyleLightContent;
+	return UIStatusBarStyleLightContent;
 }
 
 
 - (BOOL)shouldAutorotate
 {
-  return YES;
+	return YES;
 }
 
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-  UIWindow *mainWindow = [UIApplication sharedApplication].delegate.window;
-  UIViewController *rootViewController = mainWindow.rootViewController;
-  if (rootViewController.presentedViewController) {
-    return [rootViewController.presentedViewController supportedInterfaceOrientations];
-  } else {
-    return [rootViewController supportedInterfaceOrientations];
-  }
+	UIWindow *mainWindow = [UIApplication sharedApplication].delegate.window;
+	UIViewController *rootViewController = mainWindow.rootViewController;
+	if (rootViewController.presentedViewController) {
+		return [rootViewController.presentedViewController supportedInterfaceOrientations];
+	} else {
+		return [rootViewController supportedInterfaceOrientations];
+	}
 }
 
 
 - (UIView *)view
 {
-  return nil;
+	return nil;
 }
 
 

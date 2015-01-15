@@ -71,7 +71,7 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
 	[self _removeWindow];
 }
 
@@ -141,7 +141,7 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 - (id)initWithTitle:(NSString *)aTitle loading:(BOOL)isLoading {
 	if ((self = [super initWithFrame:CGRectZero])) {
 		self.backgroundColor = [UIColor clearColor];
-    self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+		self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 		
 		_hudSize = CGSizeMake(172.0f, 172.0f);
 		
@@ -192,10 +192,10 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 
 - (void)show {
 //	[self retain];
-  if (self.visible) {
-    return;
-  }
-  
+	if (self.visible) {
+		return;
+	}
+	
 	if (!_hudWindow) {
 		_hudWindow = [SSHUDWindow defaultWindow];
 	}
@@ -203,7 +203,7 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 	_hudWindow.alpha = 0.0f;
 	self.alpha = 0.0f;
 	[_hudWindow addSubview:self];
-  _hudWindow.hidden = NO;
+	_hudWindow.hidden = NO;
 	
 	[UIView beginAnimations:@"SSHUDViewFadeInWindow" context:nil];
 	_hudWindow.alpha = 1.0f;
@@ -214,7 +214,7 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 									 roundf((windowSize.height - _hudSize.height) / 2.0f) + 10.0f,
 									 _hudSize.width, _hudSize.height);
 	
-  self.frame = CGRectSetY(contentFrame, contentFrame.origin.y + IndicatorAnimationOffset);
+	self.frame = CGRectSetY(contentFrame, contentFrame.origin.y + IndicatorAnimationOffset);
 
 	[UIView beginAnimations:@"SSHUDViewFadeInContentAlpha" context:nil];
 	[UIView setAnimationDelay:0.1];
@@ -227,22 +227,22 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 	[UIView setAnimationDuration:0.3];
 	self.frame = contentFrame;
 	[UIView commitAnimations];
-  
-  self.visible = YES;
+	
+	self.visible = YES;
 }
 
 
 - (void)showWithTitle:(NSString *)title {
 	self.title = title;
-  [self show];
+	[self show];
 }
 
 
 - (void)showLoadingWithTitle:(NSString *)title
 {
-  self.title = title;
-  self.loading = YES;
-  [self show];
+	self.title = title;
+	self.loading = YES;
+	[self show];
 }
 
 
@@ -250,7 +250,7 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 	self.successful = YES;
 	self.loading = NO;
 	self.title = aTitle;
-  [self show];
+	[self show];
 }
 
 
@@ -293,14 +293,14 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 
 
 - (void)dismissAnimated:(BOOL)animated {
-  if (!self.visible) {
-    return;
-  }
-  
+	if (!self.visible) {
+		return;
+	}
+	
 	[UIView beginAnimations:@"SSHUDViewFadeOutContentFrame" context:nil];
 	[UIView setAnimationDuration:0.2];
 	CGRect contentFrame = self.frame;
-  self.frame = CGRectSetY(contentFrame, contentFrame.origin.y + IndicatorAnimationOffset);
+	self.frame = CGRectSetY(contentFrame, contentFrame.origin.y + IndicatorAnimationOffset);
 	[UIView commitAnimations];
 	
 	[UIView beginAnimations:@"SSHUDViewFadeOutContentAlpha" context:nil];
@@ -318,8 +318,8 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 	} else {
 		[self _removeWindow];
 	}
-  
-  self.visible = NO;
+
+	self.visible = NO;
 }
 
 
@@ -327,7 +327,7 @@ static const CGFloat IndicatorAnimationOffset = 20.0;
 
 
 - (void)_removeWindow {
-  _hudWindow.hidden = YES;
+	_hudWindow.hidden = YES;
 	_hudWindow = nil;
 }
 
