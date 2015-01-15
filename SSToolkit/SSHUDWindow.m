@@ -10,6 +10,11 @@
 #import "SSDrawingUtilities.h"
 #import "UIImage+SSToolkitAdditions.h"
 
+
+@interface SSHUDWindowRootViewController : UIViewController
+@end
+
+
 static SSHUDWindow *kHUDWindow = nil;
 
 @implementation SSHUDWindow
@@ -41,6 +46,7 @@ static SSHUDWindow *kHUDWindow = nil;
 	if ((self = [super initWithFrame:[[UIScreen mainScreen] bounds]])) {
 		self.backgroundColor = [UIColor clearColor];
 		self.windowLevel = UIWindowLevelStatusBar + 1.0f;
+    self.rootViewController = [SSHUDWindowRootViewController new];
 	}
 	return self;
 }
@@ -57,5 +63,41 @@ static SSHUDWindow *kHUDWindow = nil;
 	CGGradientRef gradient = SSCreateGradientWithColors(@[[UIColor colorWithWhite:0.0f alpha:0.1f], [UIColor colorWithWhite:0.0f alpha:0.5f]]);
 	CGContextDrawRadialGradient(context, gradient, self.center, 0.0f, self.center, fmaxf(self.bounds.size.width, self.bounds.size.height) / 2.0f, kCGGradientDrawsAfterEndLocation);
 }
+
+@end
+
+
+@implementation SSHUDWindowRootViewController
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+  return UIStatusBarStyleLightContent;
+}
+
+
+- (BOOL)shouldAutorotate
+{
+  return YES;
+}
+
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+  UIWindow *mainWindow = [UIApplication sharedApplication].delegate.window;
+  UIViewController *rootViewController = mainWindow.rootViewController;
+  if (rootViewController.presentedViewController) {
+    return [rootViewController.presentedViewController supportedInterfaceOrientations];
+  } else {
+    return [rootViewController supportedInterfaceOrientations];
+  }
+}
+
+
+- (UIView *)view
+{
+  return nil;
+}
+
 
 @end

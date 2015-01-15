@@ -15,6 +15,7 @@
 #import "UIImage+SSToolkitAdditions.h"
 
 static CGFloat kIndicatorSize = 40.0;
+static const CGFloat IndicatorAnimationOffset = 20.0;
 
 @interface SSHUDView (PrivateMethods)
 - (void)_setTransformForCurrentOrientation:(BOOL)animated;
@@ -140,6 +141,7 @@ static CGFloat kIndicatorSize = 40.0;
 - (id)initWithTitle:(NSString *)aTitle loading:(BOOL)isLoading {
 	if ((self = [super initWithFrame:CGRectZero])) {
 		self.backgroundColor = [UIColor clearColor];
+    self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 		
 		_hudSize = CGSizeMake(172.0f, 172.0f);
 		
@@ -172,10 +174,6 @@ static CGFloat kIndicatorSize = 40.0;
 		// Images
 		self.completeImage = [UIImage imageNamed:@"hud-check.png" bundleName:kSSToolkitBundleName];
 		self.failImage = [UIImage imageNamed:@"hud-x.png" bundleName:kSSToolkitBundleName];
-        
-        // Orientation
-        [self _setTransformForCurrentOrientation:NO];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_deviceOrientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
 	}
 	return self;
 }
@@ -216,14 +214,8 @@ static CGFloat kIndicatorSize = 40.0;
 									 roundf((windowSize.height - _hudSize.height) / 2.0f) + 10.0f,
 									 _hudSize.width, _hudSize.height);
 	
-    
-    CGFloat offset = 20.0f;
-    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
-        self.frame = CGRectSetY(contentFrame, contentFrame.origin.y + offset);
-    } else {
-        self.frame = CGRectSetX(contentFrame, contentFrame.origin.x + offset);
-    }
-	
+  self.frame = CGRectSetY(contentFrame, contentFrame.origin.y + IndicatorAnimationOffset);
+
 	[UIView beginAnimations:@"SSHUDViewFadeInContentAlpha" context:nil];
 	[UIView setAnimationDelay:0.1];
 	[UIView setAnimationDuration:0.2];
@@ -308,12 +300,7 @@ static CGFloat kIndicatorSize = 40.0;
 	[UIView beginAnimations:@"SSHUDViewFadeOutContentFrame" context:nil];
 	[UIView setAnimationDuration:0.2];
 	CGRect contentFrame = self.frame;
-    CGFloat offset = 20.0f;
-    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
-        self.frame = CGRectSetY(contentFrame, contentFrame.origin.y + offset);
-    } else {
-        self.frame = CGRectSetX(contentFrame, contentFrame.origin.x + offset);
-    }
+  self.frame = CGRectSetY(contentFrame, contentFrame.origin.y + IndicatorAnimationOffset);
 	[UIView commitAnimations];
 	
 	[UIView beginAnimations:@"SSHUDViewFadeOutContentAlpha" context:nil];
@@ -338,48 +325,8 @@ static CGFloat kIndicatorSize = 40.0;
 
 #pragma mark - Private Methods
 
-- (void)_setTransformForCurrentOrientation:(BOOL)animated {
-	UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-	NSInteger degrees = 0;
-    
-    // Landscape left
-	if (orientation == UIInterfaceOrientationLandscapeLeft) {
-		degrees = -90;
-	}
-	
-	// Landscape right
-	if (orientation == UIInterfaceOrientationLandscapeRight) {
-		degrees = 90;
-	}
-	
-	// Portrait upside down
-	else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
-		degrees = 180;
-	}
-    
-    CGAffineTransform rotationTransform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(degrees));
-    
-	if (animated) {
-		[UIView beginAnimations:@"SSHUDViewRotationTransform" context:nil];
-		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-		[UIView setAnimationDuration:0.3];
-	}
-    
-	[self setTransform:rotationTransform];
-    
-    if (animated) {
-		[UIView commitAnimations];
-	}
-}
 
-
-- (void)_deviceOrientationChanged:(NSNotification *)notification {
-    [self _setTransformForCurrentOrientation:YES];
-	[self setNeedsDisplay];
-}
-
-
-- (void)_removeWindow {	
+- (void)_removeWindow {
   _hudWindow.hidden = YES;
 	_hudWindow = nil;
 }
