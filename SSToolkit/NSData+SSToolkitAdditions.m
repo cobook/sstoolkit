@@ -33,7 +33,7 @@ static const short _base64DecodingTable[256] = {
 
 - (NSString *)MD5Sum {
 	unsigned char digest[CC_MD5_DIGEST_LENGTH], i;
-	CC_MD5(self.bytes, self.length, digest);
+	CC_MD5(self.bytes, (CC_LONG)self.length, digest);
 	NSMutableString *ms = [NSMutableString string];
 	for (i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
 		[ms appendFormat: @"%02x", (int)(digest[i])];
@@ -44,7 +44,7 @@ static const short _base64DecodingTable[256] = {
 - (NSString *)SHA1Sum {
 	NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
 	uint8_t digest[CC_SHA1_DIGEST_LENGTH];
-	CC_SHA1(self.bytes, self.length, digest);
+	CC_SHA1(self.bytes, (CC_LONG)self.length, digest);
 	for (NSInteger i = 0; i < CC_SHA1_DIGEST_LENGTH; i++) {
 		[output appendFormat:@"%02x", digest[i]];
 	}
