@@ -155,6 +155,30 @@
 		B2FC71BB1330424F00D4FCCF /* SSCollectionViewItemInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FC71BA1330424F00D4FCCF /* SSCollectionViewItemInternal.h */; };
 		B2FC9F5213CA73AB001E3F17 /* ViewCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FC9F5113CA73AB001E3F17 /* ViewCategoryTest.m */; };
 		B2FE26B9136684D400B97612 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FE26B8136684D400B97612 /* QuartzCore.framework */; };
+		EE0CF3391ADD73DA009961E0 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C507EB151BA64400E94614 /* CoreFoundation.framework */; };
+		EE0CF33B1ADD73DA009961E0 /* SSToolkit.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2C5080F151BA6C500E94614 /* SSToolkit.strings */; };
+		EE0CF33C1ADD73DA009961E0 /* hud-check.png in Resources */ = {isa = PBXBuildFile; fileRef = B2FD76DE151C404600C813FA /* hud-check.png */; };
+		EE0CF33D1ADD73DA009961E0 /* hud-check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2FD76DF151C404600C813FA /* hud-check@2x.png */; };
+		EE0CF33E1ADD73DA009961E0 /* hud-x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2FD76E0151C404600C813FA /* hud-x.png */; };
+		EE0CF33F1ADD73DA009961E0 /* hud-x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2FD76E1151C404600C813FA /* hud-x@2x.png */; };
+		EE0CF3401ADD73DA009961E0 /* gray-star.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C507F9151BA6C000E94614 /* gray-star.png */; };
+		EE0CF3411ADD73DA009961E0 /* gray-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C507FA151BA6C000E94614 /* gray-star@2x.png */; };
+		EE0CF3421ADD73DA009961E0 /* orange-star.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C507FB151BA6C000E94614 /* orange-star.png */; };
+		EE0CF3431ADD73DA009961E0 /* orange-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C507FC151BA6C000E94614 /* orange-star@2x.png */; };
+		EE0CF3441ADD73DA009961E0 /* SSAddressBarTextFieldBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C507FD151BA6C000E94614 /* SSAddressBarTextFieldBackground.png */; };
+		EE0CF3451ADD73DA009961E0 /* SSAddressBarTextFieldBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C507FE151BA6C000E94614 /* SSAddressBarTextFieldBackground@2x.png */; };
+		EE0CF3461ADD73DA009961E0 /* SSAddressBarTextFieldReload.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C507FF151BA6C000E94614 /* SSAddressBarTextFieldReload.png */; };
+		EE0CF3471ADD73DA009961E0 /* SSAddressBarTextFieldReload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C50800151BA6C000E94614 /* SSAddressBarTextFieldReload@2x.png */; };
+		EE0CF3481ADD73DA009961E0 /* SSAddressBarTextFieldStop.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C50801151BA6C000E94614 /* SSAddressBarTextFieldStop.png */; };
+		EE0CF3491ADD73DA009961E0 /* SSAddressBarTextFieldStop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C50802151BA6C000E94614 /* SSAddressBarTextFieldStop@2x.png */; };
+		EE0CF34A1ADD73DA009961E0 /* UISegmentBarButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C50807151BA6C000E94614 /* UISegmentBarButton.png */; };
+		EE0CF34B1ADD73DA009961E0 /* UISegmentBarButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C50808151BA6C000E94614 /* UISegmentBarButton@2x.png */; };
+		EE0CF34C1ADD73DA009961E0 /* UISegmentBarButtonHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C50809151BA6C000E94614 /* UISegmentBarButtonHighlighted.png */; };
+		EE0CF34D1ADD73DA009961E0 /* UISegmentBarButtonHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C5080A151BA6C000E94614 /* UISegmentBarButtonHighlighted@2x.png */; };
+		EE0CF34E1ADD73DA009961E0 /* UISegmentBarDivider.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C5080B151BA6C000E94614 /* UISegmentBarDivider.png */; };
+		EE0CF34F1ADD73DA009961E0 /* UISegmentBarDivider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C5080C151BA6C000E94614 /* UISegmentBarDivider@2x.png */; };
+		EE0CF3501ADD73DA009961E0 /* UISegmentBarDividerHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C5080D151BA6C000E94614 /* UISegmentBarDividerHighlighted.png */; };
+		EE0CF3511ADD73DA009961E0 /* UISegmentBarDividerHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C5080E151BA6C000E94614 /* UISegmentBarDividerHighlighted@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,6 +361,7 @@
 		B2FD76E1151C404600C813FA /* hud-x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-x@2x.png"; sourceTree = "<group>"; };
 		B2FE26B8136684D400B97612 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libSSToolkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSToolkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0CF3551ADD73DA009961E0 /* SSToolkitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSToolkitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +396,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE0CF3381ADD73DA009961E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0CF3391ADD73DA009961E0 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -380,6 +413,7 @@
 				D2AAC07E0554694100DB518D /* libSSToolkit.a */,
 				B239101D1357DC3E00ADE21B /* SSToolkitTests.app */,
 				B2C507EA151BA64400E94614 /* SSToolkitResources.bundle */,
+				EE0CF3551ADD73DA009961E0 /* SSToolkitResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -791,6 +825,23 @@
 			productReference = D2AAC07E0554694100DB518D /* libSSToolkit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		EE0CF3361ADD73DA009961E0 /* SSToolkitResourcesOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE0CF3521ADD73DA009961E0 /* Build configuration list for PBXNativeTarget "SSToolkitResourcesOSX" */;
+			buildPhases = (
+				EE0CF3371ADD73DA009961E0 /* Sources */,
+				EE0CF3381ADD73DA009961E0 /* Frameworks */,
+				EE0CF33A1ADD73DA009961E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSToolkitResourcesOSX;
+			productName = SSToolkitResources;
+			productReference = EE0CF3551ADD73DA009961E0 /* SSToolkitResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -835,6 +886,7 @@
 				D2AAC07D0554694100DB518D /* SSToolkit */,
 				B239101C1357DC3E00ADE21B /* SSToolkitTests */,
 				B2C507E9151BA64400E94614 /* SSToolkitResources */,
+				EE0CF3361ADD73DA009961E0 /* SSToolkitResourcesOSX */,
 			);
 		};
 /* End PBXProject section */
@@ -874,6 +926,36 @@
 				B23F16161547C73D00638372 /* UISegmentBarDivider@2x.png in Resources */,
 				B23F16171547C73D00638372 /* UISegmentBarDividerHighlighted.png in Resources */,
 				B23F16181547C73D00638372 /* UISegmentBarDividerHighlighted@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE0CF33A1ADD73DA009961E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0CF33B1ADD73DA009961E0 /* SSToolkit.strings in Resources */,
+				EE0CF33C1ADD73DA009961E0 /* hud-check.png in Resources */,
+				EE0CF33D1ADD73DA009961E0 /* hud-check@2x.png in Resources */,
+				EE0CF33E1ADD73DA009961E0 /* hud-x.png in Resources */,
+				EE0CF33F1ADD73DA009961E0 /* hud-x@2x.png in Resources */,
+				EE0CF3401ADD73DA009961E0 /* gray-star.png in Resources */,
+				EE0CF3411ADD73DA009961E0 /* gray-star@2x.png in Resources */,
+				EE0CF3421ADD73DA009961E0 /* orange-star.png in Resources */,
+				EE0CF3431ADD73DA009961E0 /* orange-star@2x.png in Resources */,
+				EE0CF3441ADD73DA009961E0 /* SSAddressBarTextFieldBackground.png in Resources */,
+				EE0CF3451ADD73DA009961E0 /* SSAddressBarTextFieldBackground@2x.png in Resources */,
+				EE0CF3461ADD73DA009961E0 /* SSAddressBarTextFieldReload.png in Resources */,
+				EE0CF3471ADD73DA009961E0 /* SSAddressBarTextFieldReload@2x.png in Resources */,
+				EE0CF3481ADD73DA009961E0 /* SSAddressBarTextFieldStop.png in Resources */,
+				EE0CF3491ADD73DA009961E0 /* SSAddressBarTextFieldStop@2x.png in Resources */,
+				EE0CF34A1ADD73DA009961E0 /* UISegmentBarButton.png in Resources */,
+				EE0CF34B1ADD73DA009961E0 /* UISegmentBarButton@2x.png in Resources */,
+				EE0CF34C1ADD73DA009961E0 /* UISegmentBarButtonHighlighted.png in Resources */,
+				EE0CF34D1ADD73DA009961E0 /* UISegmentBarButtonHighlighted@2x.png in Resources */,
+				EE0CF34E1ADD73DA009961E0 /* UISegmentBarDivider.png in Resources */,
+				EE0CF34F1ADD73DA009961E0 /* UISegmentBarDivider@2x.png in Resources */,
+				EE0CF3501ADD73DA009961E0 /* UISegmentBarDividerHighlighted.png in Resources */,
+				EE0CF3511ADD73DA009961E0 /* UISegmentBarDividerHighlighted@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -958,6 +1040,13 @@
 				B2C7ED6D153A5624006ABE73 /* SSButton.m in Sources */,
 				962F5F5F156CCD1200408648 /* NSNumber+SSToolkitAdditions.m in Sources */,
 				5841B48516013CDE000C05BD /* NSMutableArray+SSToolkitAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE0CF3371ADD73DA009961E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1253,6 +1342,56 @@
 			};
 			name = Release;
 		};
+		EE0CF3531ADD73DA009961E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSToolkitResources/SSToolkitResources-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Resources/SSToolkitResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = SSToolkitResources;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EE0CF3541ADD73DA009961E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSToolkitResources/SSToolkitResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Resources/SSToolkitResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = SSToolkitResources;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1288,6 +1427,15 @@
 			buildConfigurations = (
 				B2C507F4151BA64400E94614 /* Debug */,
 				B2C507F5151BA64400E94614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE0CF3521ADD73DA009961E0 /* Build configuration list for PBXNativeTarget "SSToolkitResourcesOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE0CF3531ADD73DA009961E0 /* Debug */,
+				EE0CF3541ADD73DA009961E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
