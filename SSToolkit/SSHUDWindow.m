@@ -82,7 +82,7 @@ static SSHUDWindow *kHUDWindow = nil;
 }
 
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
 	UIWindow *mainWindow = [UIApplication sharedApplication].delegate.window;
 	UIViewController *rootViewController = mainWindow.rootViewController;
